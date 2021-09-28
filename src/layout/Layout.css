@@ -1,0 +1,17 @@
+body {
+    background-image: url(bg.svg);
+    font-family: Source Sans Pro;
+}
+
+.or {
+    color: #D48432;
+}
+
+.btn {
+    background-color: #D48432;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: larger;
+    font-weight: bold;
+}
