@@ -6,18 +6,16 @@ import {
 } from 'react-router-dom';
 import Layout from './layout/Layout'
 import Home from './components/pages/Home'
-// import AboutUs from './components/pages/AboutUs'
+import AboutUs from './components/pages/Aboutus'
 
 function App() {
   return (
     <div>
       <Router>
-      <Layout>
+        <Layout>
           <Switch>
-            {
-              // <Route path={'/AboutUs'} component={AboutUs}></Route>
+              <Route path={'/aboutus'} component={AboutUs}></Route>
               <Route path={'/'} component={Home}></Route>
-            }
           </Switch>
         </Layout>
       </Router>

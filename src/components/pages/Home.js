@@ -1,27 +1,26 @@
 import React, { Component } from 'react'
-import './Home.css'
-import rocketLogo from '../misc/rocket.svg'
-import newsLetterLogo from '../misc/news-letter.svg'
-import discordLogo from '../misc/discord.svg'
-import arrowHeadLogo from '../misc/arrow-head.svg'
-import cipherSchoolsLogo from '../misc/cipherschools-logo.svg'
+import './Home.css';
+import Modal from './Modal';
+import rocketLogo from '../misc/rocket.svg';
+import newsLetterLogo from '../misc/news-letter.svg';
+import discordLogo from '../misc/discord.svg';
+import arrowHeadLogo from '../misc/arrow-head.svg';
+import cipherSchoolsLogo from '../misc/cipherschools-logo.svg';
 import linkedinLogo from '../misc/linkedin.svg';
 import githubLogo from '../misc/github.svg';
 import facebookLogo from '../misc/facebook.svg';
 import twitterLogo from '../misc/twitter.svg';
 import instagramLogo from '../misc/instagram.svg';
 
-let modelOn = false;
-
 class Home extends Component {
 
-    openForm() {
-        modelOn = true;
-        document.getElementsByClassName("popup")[0].classList.remove("hidden");
+    constructor(props) {
+        super(props);
+        this.state = {show: false};
     }
 
-    componentDidMount() {
-
+    showModal = () => {
+        this.setState({show: true});
     }
 
     render() {
@@ -31,7 +30,7 @@ class Home extends Component {
 
                 <div className={"top-section"}>
                     <img src={cipherSchoolsLogo} alt={"Cipherschools logo"} />
-                    <a href="/" className={"about-us or"}>Know More About Us</a>
+                    <a href="/aboutus" className={"about-us-link or"}>Know More About Us</a>
                 </div>
 
                 <main className={"main-section"}>
@@ -60,7 +59,7 @@ class Home extends Component {
                                         <span>Discord</span>
                                     </div>
                                 </button>
-                                <button className={"btn invitation-btn"} onClick={this.openForm}><div>Have Invitation
+                                <button className={"btn invitation-btn"} type="button" onClick={this.showModal}><div>Have Invitation
                                     <img src={arrowHeadLogo} alt={"Arrowhead logo"} /></div>
                                 </button>
                         </div>
@@ -89,22 +88,7 @@ class Home extends Component {
                     </section>
                 </main>
 
-                {/* Modal */}
-                <div className={"popup hidden"}>
-                    <div className={"popup-top"}>
-                        <p className={"or"}>Enter Invitation<br/>Link/Code</p>
-                        <img src={newsLetterLogo} alt="Newsletter logo"></img>
-                    </div>
-                    <div className={"popup-email"}>
-                        <form className={"popup-form"} action={""}>
-                            <input className={"email-inp"} type="email" name="email" id="email" placeholder={"Invitation Link/Code"}/>
-                            <br />
-                            <div className={"center-align"} >
-                                <button className={"btn access-btn"} type="submit">Access Now</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
+                <Modal show={this.state.show} onClose={() => this.setState({show: false}) }/>
                 
             </React.Fragment>
         )

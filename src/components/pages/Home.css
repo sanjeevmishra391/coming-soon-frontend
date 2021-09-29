@@ -8,7 +8,7 @@
     width: 150px;
 }
 
-.about-us {
+.about-us-link {
     text-decoration: none;
     font-weight: bold;
     align-self: center;
@@ -79,6 +79,7 @@
     padding: 10px;
     margin: 5%;
     min-width: 200px;
+    min-height: 50px;
 }
 
 .discord-text {
@@ -148,44 +149,49 @@ h1 {
     cursor: pointer;
 }
 
-.hidden {
-    display: none;
-}
-
 .popup {
     position: fixed;
-    top: 15%;
-    left: 25%;
-    min-width: 200px;
-    max-width: 500px;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(50, 50, 50, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup-content {
+    margin: 5%;
+    max-width: 400px;
     background-color: #fff;
-    padding: 25px;
+    padding: min(4%, 25px);
     border-radius: 30px;
     z-index: 20;
     border: 2px solid #7791A1;
-    box-shadow: 0px 0px 5000px #7791A1;
 }
 
 .popup-top {
     display: flex;
     margin-bottom: 12%;
+    justify-content: space-around;
 }
 
 .popup-top p {
-    font-size: 3vw;
+    font-size: max(2.5vw, 25px);
     font-weight: bolder;
     display: flex;
     align-items: center;
     margin: 0%;
+    word-wrap: break-word;
 }
 
 .popup-top img {
-    width: 65%;
-    max-width: 300px;
+    width: min(55%, 300px);
 }
 
 .access-btn {
-    margin: 0% auto 3%;
+    margin: 0% auto 2%;
     display: block;
     width: 60%;
     border-radius: 20px;
@@ -247,8 +253,12 @@ h1 {
     }
 
     .discord-btn, .invitation-btn {
-        margin: 5%;
+        margin: 5% auto 2%;
         width: 50%;
+    }
+
+    .follow-us {
+        margin-top: 25px;
     }
 
     .social-icons img {
