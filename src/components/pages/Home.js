@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './Home.css';
-import Modal from './Modal';
+import Modal from '../misc/Modal';
 import rocketLogo from '../misc/rocket.svg';
 import newsLetterLogo from '../misc/news-letter.svg';
 import discordLogo from '../misc/discord.svg';

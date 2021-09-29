@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import './Aboutus.css'
-import Card from './Card'
-import Footer from './Footer';
+import Card from '../misc/Card'
+import Footer from '../misc/Footer';
 
 class Aboutus extends Component {
     render() {
