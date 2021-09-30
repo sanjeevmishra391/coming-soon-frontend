@@ -1,16 +1,17 @@
 import React, { Component } from 'react'
 import './Home.css';
-import Modal from '../misc/Modal';
-import rocketLogo from '../misc/rocket.svg';
-import newsLetterLogo from '../misc/news-letter.svg';
-import discordLogo from '../misc/discord.svg';
-import arrowHeadLogo from '../misc/arrow-head.svg';
-import cipherSchoolsLogo from '../misc/cipherschools-logo.svg';
-import linkedinLogo from '../misc/linkedin.svg';
-import githubLogo from '../misc/github.svg';
-import facebookLogo from '../misc/facebook.svg';
-import twitterLogo from '../misc/twitter.svg';
-import instagramLogo from '../misc/instagram.svg';
+// import InvitationModal from '../misc/InvitationModal';
+import EarlyAccessModal from '../misc/EarlyAccessModal';
+import rocketLogo from '../misc/svgs/rocket.svg';
+import newsLetterLogo from '../misc/svgs/news-letter.svg';
+import discordLogo from '../misc/svgs/discord.svg';
+import arrowHeadLogo from '../misc/svgs/arrow-head.svg';
+import cipherSchoolsLogo from '../misc/svgs/cipherschools-logo.svg';
+import linkedinLogo from '../misc/svgs/linkedin.svg';
+import githubLogo from '../misc/svgs/github.svg';
+import facebookLogo from '../misc/svgs/facebook.svg';
+import twitterLogo from '../misc/svgs/twitter.svg';
+import instagramLogo from '../misc/svgs/instagram.svg';
 
 class Home extends Component {
 
@@ -36,32 +37,32 @@ class Home extends Component {
                 <main className={"main-section"}>
                     <section className={"left-main"}>
                         <div className={"early-access"}>
-                            <div className={"early-access-top"}>
-                                <p className={"or"}>Get Early Access</p>
+                            <div className={"early-access-header"}>
                                 <img src={newsLetterLogo} alt="Newsletter logo"></img>
                             </div>
-                            <div className={"early-access-email"}>
-                                <form className={"early-access-form"} action={""}>
-                                    <input className={"email-inp"} type="email" name="email" id="email" placeholder={"Email address"}/>
-                                    <br />
-                                    <button className={"btn notify-btn"} type="submit">Notify Me</button>
-                                </form>
+                            <div className={"early-access-body"}>
+                                <button className={"btn early-access-btn"} type="button" onClick={this.showModal}>Get Early Access</button>
                             </div>
                         </div>
 
                         <div className={"discord-section"}>
+                            <a href="https://discord.gg/RjVvEzYP9n">
                                 <button className={"btn discord-btn"}>
-                                    <div>
-                                        <img src={discordLogo} alt={"Discord Logo"} />
-                                    </div>
-                                    <div className={"discord-text"}>
-                                        <span className={"join-span"}>JOIN OUR</span>
-                                        <span>Discord</span>
+                                    <div className={"hr-center"} >
+                                        <div className={"discord-logo"}>
+                                            <img src={discordLogo} alt={"Discord Logo"} />
+                                        </div>
+                                        <div className={"discord-text"}>
+                                            <span className={"join-span"}>JOIN OUR</span>
+                                            <span>Discord</span>
+                                        </div>
                                     </div>
                                 </button>
-                                <button className={"btn invitation-btn"} type="button" onClick={this.showModal}><div>Have Invitation
+                            </a>
+                                {/* invition button */}
+                                {/* <button className={"btn invitation-btn"} type="button" onClick={this.showModal}><div>Have Invitation
                                     <img src={arrowHeadLogo} alt={"Arrowhead logo"} /></div>
-                                </button>
+                                </button> */}
                         </div>
                     </section>
 
@@ -78,17 +79,27 @@ class Home extends Component {
                                 <p>Follow Us</p>
                             </div>
                             <div className={"social-icons"}>
-                                <img src={linkedinLogo} alt={"Linkedin logo"} />
-                                <img src={githubLogo} alt={"Github logo"} />
-                                <img src={facebookLogo} alt={"Facebook logo"} />
-                                <img src={twitterLogo} alt={"Twitter logo"} />
-                                <img src={instagramLogo} alt={"Instagram logo"} />
+                                <a href={"https://www.linkedin.com/company/cipherschool"} >
+                                    <img src={linkedinLogo} alt={"Linkedin logo"} />
+                                </a>
+                                <a href={""} >
+                                    <img src={githubLogo} alt={"Github logo"} />
+                                </a>
+                                <a href={"https://www.facebook.com/schoolsCipher/"} >
+                                    <img src={facebookLogo} alt={"Facebook logo"} />
+                                </a>
+                                <a href={"https://twitter.com/CipherSchools?s=09"} >
+                                    <img src={twitterLogo} alt={"Twitter logo"} />
+                                </a>
+                                <a href={"https://instagram.com/cipherschools/"} >
+                                    <img src={instagramLogo} alt={"Instagram logo"} />
+                                </a>
                             </div>
                         </div>
                     </section>
                 </main>
 
-                <Modal show={this.state.show} onClose={() => this.setState({show: false}) }/>
+                <EarlyAccessModal show={this.state.show} onClose={() => this.setState({show: false}) }/>
                 
             </React.Fragment>
         )

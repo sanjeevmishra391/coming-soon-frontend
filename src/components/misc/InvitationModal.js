@@ -1,7 +1,7 @@
 import React from 'react'
-import newsLetterLogo from '../misc/news-letter.svg';
+import newsLetterLogo from '../misc/svgs/news-letter.svg';
 
-const Modal = props => {
+const InvitationModal = props => {
     if(props.show === false) {
         return null;
     }
@@ -28,4 +28,4 @@ const Modal = props => {
     )
 }
 
-export default Modal;
+export default InvitationModal;

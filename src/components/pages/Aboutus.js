@@ -17,13 +17,15 @@ class Aboutus extends Component {
                     <div className={"about-container hr-center"}>
                         <div className={"about-us box-style"}>
                             <h2>About Us</h2>
-                            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                            <p>CipherSchools is a Potential Multi-Billion Dollar Organization founded in 2020 with a vision to be amongst the Top 10 Organizations in the world within the next 10 Years. An online education platform that provides different Programs across formal and informal education.
+CipherSchools endows students to touch their full potential through relevant and pre-evaluated online programs delivered in the most engaging learning environment.
+CipherSchools is driven by commitment, poised to revolutionize the learning platform.</p>
                         </div>
                     </div>
                 </div>
                 
-                <div className={"hr-center"}>
-                    <h2>Meet The Team</h2>
+                <div className={"meet-team hr-center"}>
+                    <h2>Meet the believers of our journey so far!</h2>
                 </div>
 
                 <div className={"team-container hr-center"}>
@@ -39,6 +41,12 @@ class Aboutus extends Component {
                         <Card name={"Member Name"} img={"https://cdn-icons-png.flaticon.com/512/747/747376.png"} />
 
                         <Card name={"Member Name"} img={"https://cdn-icons-png.flaticon.com/512/747/747376.png"} />
+
+                        <Card name={"Member Name"} img={"https://cdn-icons-png.flaticon.com/512/747/747376.png"} />
+                        <Card name={"Member Name"} img={"https://cdn-icons-png.flaticon.com/512/747/747376.png"} />
+                        <Card name={"Member Name"} img={"https://cdn-icons-png.flaticon.com/512/747/747376.png"} />
+                        <Card name={"Member Name"} img={"https://cdn-icons-png.flaticon.com/512/747/747376.png"} />
+
 
                     </div>
 

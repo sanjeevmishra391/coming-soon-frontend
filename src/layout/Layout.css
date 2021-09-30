@@ -15,3 +15,8 @@ body {
     font-size: larger;
     font-weight: bold;
 }
+
+.hr-center {
+    display: flex;
+    justify-content: center;
+}

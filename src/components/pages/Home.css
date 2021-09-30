@@ -30,79 +30,62 @@
     border-radius: 30px;
 }
 
-.early-access-top {
-    display: flex;
-    align-items: center;
-    margin-bottom: 12%;
-}
-
-.early-access-top p {
-    font-size: 200%;
-    max-width: 45%;
-    font-weight: bolder;
-    display: flex;
-    align-items: center;
-    margin: 0%;
-}
-
-.early-access-top img {
-    width: 65%;
-}
-
-.early-access-form, .email-inp, .notify-btn {
-    display: block;
+.early-access-header img {
     width: 100%;
 }
 
-.email-inp {
-    border: none;
-    border-bottom: 1.5px solid #7791A1;
-    opacity: 0.5;
-    font-size: large;
-    outline: none;
-    margin-bottom: 5%;
-}
-
-.notify-btn {
-    border-radius: 20px;
+.early-access-btn {
+    width: 100%;
     height: 12vh;
+    border-radius: 20px;
+    margin-top: 20px;
 }
 
 .discord-section {
     display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
+    /* justify-content: space-evenly;
+    flex-wrap: wrap; */
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
 }
 
-.discord-btn, .invitation-btn {
+/* .invitation-btn {
     border-radius: 15px;
     padding: 10px;
     margin: 5%;
     min-width: 200px;
     min-height: 50px;
+} */
+
+.discord-btn {
+    border-radius: 15px;
+    padding: 10px;
+    min-width: 200px;
+}
+
+.discord-btn img {
+    width: 70%;
+    padding: 0px 10px 0px 0px;
+    display: flex;
+    align-items: center;
 }
 
 .discord-text {
     display: flex;
     flex-direction: column;
     align-items: center;
-    float: left;
+    justify-content: center;
 }
 
 .join-span {
     font-size: x-small;
 }
 
-.discord-btn img {
-    width: 20%;
-    padding: 0px 10px 0px 20px;
-    float: left;
-}
-
-.invitation-btn img {
+/* .invitation-btn img {
     width: 5%;
     padding-left: 10px;
-}
+} */
 
 .lauch {
     position: relative;
@@ -129,7 +112,7 @@ h1 {
 }
 
 .follow-us {
-    padding-top: 250%;
+    padding-top: 200%;
     writing-mode: vertical-lr;
 }
 
@@ -163,15 +146,20 @@ h1 {
 
 .popup-content {
     margin: 5%;
+    width: 100%;
     max-width: 400px;
-    background-color: #fff;
+    background-color: rgba(255, 250, 244, 0.9);
     padding: min(4%, 25px);
     border-radius: 30px;
     z-index: 20;
     border: 2px solid #7791A1;
 }
 
-.popup-top {
+.popup-form {
+    width: 100%;
+}
+
+/* .popup-top {
     display: flex;
     margin-bottom: 12%;
     justify-content: space-around;
@@ -188,19 +176,60 @@ h1 {
 
 .popup-top img {
     width: min(55%, 300px);
+} */
+
+.inp {
+    border: none;
+    opacity: 0.5;
+    outline: none;
+    background-color: #c4bcbc;
+    color: black;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+::placeholder {
+    color:rgb(29, 29, 29)
+}
+/* 
+select {
+    margin: 0;      
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    background-image:
+    linear-gradient(45deg, transparent 50%, rgb(95, 95, 95) 50%),
+    linear-gradient(135deg, rgb(95, 95, 95) 50%, transparent 50%);
+    background-position:
+        calc(100% - 20px) calc(1em + 7px),
+        calc(100% - 15px) calc(1em + 7px),
+        100% 0;
+    background-size:
+        5px 5px,
+        5px 5px,
+        2.5em 2.5em;
+    background-repeat: no-repeat;
+} */
+
+input.email {
+    width: calc(100% - 50px);
+}
+
+.inputs-section {
+    display: flex;
+    justify-content: space-between;
 }
 
 .access-btn {
-    margin: 0% auto 2%;
+    margin: 20px auto 2%;
     display: block;
-    width: 60%;
-    border-radius: 20px;
-    height: 13vh;
-}
-
-.center-align {
-    display: flex;
-    justify-content: center;
+    width: 70%;
+    border-radius: 10px;
+    height: 10vh;
 }
 
 @media (max-width:720px) {
@@ -228,6 +257,11 @@ h1 {
         grid-row: 1;
     }
 
+    h1 {
+        margin-top: 20px;
+        font-size: 400%;
+    }
+
     .rocket-img {
         display: none;
     }
@@ -252,16 +286,28 @@ h1 {
         flex-direction: column;
     }
 
-    .discord-btn, .invitation-btn {
+    /* .discord-btn, .invitation-btn {
         margin: 5% auto 2%;
         width: 50%;
-    }
+    } */
 
+    .discord-btn {
+        width: 100%;
+    }
+    
     .follow-us {
         margin-top: 25px;
     }
 
     .social-icons img {
         transform: rotate(-90deg);
+    }
+
+    .inputs-section {
+        flex-direction: column;
+    }
+
+    input.email {
+        width: 100%-20px;
     }
 }
