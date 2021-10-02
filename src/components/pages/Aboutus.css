@@ -1,141 +1,150 @@
 .watermark {
-    background-image: url("https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjh8fGRpc2N1c3Npb25zfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60");
-    background-repeat: no-repeat;
-    background-size: cover;
-    opacity: 0.9;
-    height: 50vh;
-    width: 100%;
-    position: absolute;
-    z-index: -1;
+  background-image: url("https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjh8fGRpc2N1c3Npb25zfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  opacity: 1;
+  height: 40vh;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
 }
 
 .intro {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .hr-center {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .liner-container {
-    flex-direction: column;
-    text-align: center;
-    align-items: inherit;
-    height: 30vh;
+  flex-direction: column;
+  text-align: center;
+  align-items: inherit;
+  height: 30vh;
 }
 
 .liner-container p {
-    font-weight: bold;
-    font-size: 200%;
-    color: white;
-    margin: 0%;
+  font-weight: bold;
+  font-size: 40px;
+  color: white;
+  margin: 0%;
 }
 
 .box-style {
-    background-color: #f1f1f1;
-    box-shadow: 0px -5px 15px 5px rgba(108, 93, 211, 0.2);
-    border-radius: 20px;
+  background-color: #f1f1f1;
+  box-shadow: 0px -5px 15px 5px rgba(108, 93, 211, 0.2);
+  border-radius: 20px;
 }
 
 .about-us {
-    width: 50%;
-    padding: 20px;
+  width: 50%;
+  padding: 20px;
 }
 
 .about-us h2 {
-    text-align: center;
-    margin: 0%;
+  text-align: center;
+  margin: 0%;
 }
 
 .about-us p {
-    text-align: justify;
+  padding: 0 10px;
+  text-align: justify;
+  color: #2c3d4f;
 }
 
 .meet-team {
-    text-align: center;
+  display: flex;
+  width: 90%;
+  margin: 0 5%;
+  text-align: center;
+}
+
+.team-member-container {
+  width: 75%;
 }
 
 .team-members {
-    display: flex;
-    width: 75%;
-    flex-wrap: wrap;
-    justify-content: space-around;
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
-.team-members>* {
-    margin-top: 10px;
+.team-members > * {
+  margin-top: 10px;
 }
 
 .card {
-    width: calc(90%/3);
+  width: calc(90% / 3);
 }
 
 .card-header {
-    width: 90%;
-    margin: 5%;
+  width: 90%;
+  margin: 5%;
 }
 
 .card-header img {
-    padding: 5%;
-    max-width: 90%;
-    max-height: 90%;
+  padding: 5%;
+  max-width: 90%;
+  max-height: 90%;
 }
 
 .card-body {
-    text-align: center;
-    font-weight: bold;
+  text-align: center;
+  font-weight: bold;
 }
 
 footer {
-    background-color: #f1f1f1;
-    padding: 2% 0%;
-    text-align: center;
-    margin-top: 20px;
+  background-color: #f1f1f1;
+  padding: 2% 0%;
+  text-align: center;
+  margin-top: 20px;
 }
 
 footer p {
-    font-size: 200%;
-    font-weight: bold;
-    margin: 1% auto;
+  font-size: 200%;
+  font-weight: bold;
+  margin: 1% auto;
 }
 
 footer .cs-logo img {
-    width: max(12%, 150px);
-    margin-bottom: 1%;
+  width: max(12%, 150px);
+  margin-bottom: 1%;
 }
 
 footer .social-icons img {
-    transform: rotate(-90deg);
+  transform: rotate(-90deg);
 }
 
 @media (max-width: 425px) {
-    .about-us {
-        width: 80%;
-    }
+  .liner-container p {
+    font-size: 30px;
+  }
 
-    .team-members {
-        width: 90%;
-    }
+  .box-style {
+    box-shadow: 0px -5px 8px 5px rgba(108, 93, 211, 0.2);
+  }
 
-    .card {
-        width: 50%;
-    }
+  .about-us {
+    width: 80%;
+  }
 
+  .team-member-container {
+    width: 90%;
+  }
 }
 
 @media (min-width: 425px) and (max-width: 720px) {
-    .card {
-        width: 40%;
-    }
-
-    .about-us {
-        width: 70%;
-    }
+  .about-us {
+    width: 70%;
+  }
 }
 
 @media (min-width: 1024px) {
-    .liner-container {
-        height: 40vh;
-    }
+  .liner-container {
+    height: 30vh;
+  }
 }
