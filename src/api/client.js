@@ -1,8 +1,8 @@
 import { create } from "apisauce";
 
 const client = create({
-  baseURL: "http://localhost:4000",
-  withCredentials: true,
+  baseURL: "http://localhost:3050",
+  withCredentials: false,
   timeout: 50000,
 });
 
