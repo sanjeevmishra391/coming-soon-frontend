@@ -1,9 +1,9 @@
 import { create } from "apisauce";
 
 const client = create({
-  baseURL: "http://localhost:3050",
-  withCredentials: false,
-  timeout: 50000,
+  // baseURL: "http://localhost:3050",
+  baseURL: "https://comingsoon-backend.herokuapp.com",
+  timeout: 60000,
 });
 
 const get = client.get;
