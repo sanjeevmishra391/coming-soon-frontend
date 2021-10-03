@@ -10,6 +10,29 @@
   z-index: -1;
 }
 
+.home-section {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+}
+
+.home-section a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.home-logo img {
+  width: 80%;
+}
+
+.home-text p {
+  display: inline;
+  color: white;
+  font-weight: 900;
+  padding-left: 10px;
+}
+
 .intro {
   margin-bottom: 20px;
 }

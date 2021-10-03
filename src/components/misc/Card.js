@@ -19,7 +19,10 @@ const Card = (props) => {
         </FadeIn>{" "}
       </div>
       <div className="card-person-name">
-        <span>{props.name}</span>
+        <p>{props.name}</p>
+      </div>
+      <div className="card-person-job">
+        <p>{props.job}</p>
       </div>
     </div>
   );

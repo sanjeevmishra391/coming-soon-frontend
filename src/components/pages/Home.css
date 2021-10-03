@@ -68,15 +68,24 @@
   margin: 10px 0;
 }
 
+.early-access-body {
+  text-align: center;
+}
+
 .early-access-btn {
-  width: 100%;
+  width: 80%;
   height: 80px;
   border-radius: 20px;
   margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .early-access-btn:focus {
   outline: none;
+}
+
+.early-access-btn p {
+  font-size: x-large;
 }
 
 .discord-section {

@@ -54,7 +54,7 @@ class Home extends Component {
                   type="button"
                   onClick={this.showModal}
                 >
-                  Get Early Access
+                  <p>Get Early Access</p>
                 </button>
               </div>
             </div>

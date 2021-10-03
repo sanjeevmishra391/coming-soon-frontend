@@ -6,6 +6,7 @@ import Loading from "../misc/Loading";
 import users from "../../api/users";
 import Card from "../misc/Card";
 import "./Aboutus.css";
+import homeLogo from '../misc/svgs/home.svg';
 // import Footer from "../misc/Footer";
 
 function Aboutus() {
@@ -34,6 +35,18 @@ function Aboutus() {
     <React.Fragment>
       <div className={"watermark"}></div>
       <div className={"intro"}>
+        
+        <div className={"home-section"}>
+          <a href={"/"}>
+            <div className={"home-logo"}>
+              <img src={homeLogo} alt={"Home logo"} />
+            </div>
+            <div className={"home-text"}>
+              <p>Home</p>
+            </div>
+          </a>
+        </div>
+        
         <div className={"liner-container hr-center"}>
           <p>Dedicated Teams.</p>
           <p>To Enhance Your Learning.</p>
@@ -70,7 +83,7 @@ function Aboutus() {
             className="team-members"
           >
             {members.map((member) => {
-              return <Card name={member.name} image={member.image} />;
+              return <Card name={member.name} image={member.image} job={member.job} />;
             })}
           </InfiniteScroll>
         </div>
