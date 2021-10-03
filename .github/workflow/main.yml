@@ -1,0 +1,57 @@
+name: appleboy SSH Remote connect and copy build
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@master
+      - name: Install Dependencies
+        run: npm install
+      - name: Build
+        run: npm run build
+      - name: Archive Production Artifact
+        uses: actions/upload-artifact@master
+        with:
+          name: build
+          path: build
+  copy:
+    name: Copy
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@master
+      - name: Download Artifact
+        uses: actions/download-artifact@master
+        with:
+          name: build
+          path: build
+      - name: copy file via ssh password
+        uses: appleboy/scp-action@master
+        with:
+          host: ${{ secrets.DO_HOSTNAME }}
+          username: ${{ secrets.DO_USERNAME}}
+          key: ${{ secrets.DO_SSH_PRIVATE_KEY }}
+          port: 22
+          source: "/home/runner/work/coming-soon/coming-soon/build/*"
+          target: "/root/"
+  install:
+    name: install
+    needs: copy
+    runs-on: ubuntu-latest
+    steps:
+      - uses: appleboy/ssh-action@v0.1.3
+        with:
+          host: ${{secrets.DO_HOSTNAME}}
+          key: ${{secrets.DO_SSH_PRIVATE_KEY}}
+          username: ${{secrets.DO_USERNAME}}
+          port: 22
+          script: |
+            rm -rf /root/coming-soon-backend/frontend/build/*
+            mv -f /root/github/workspace/build/* /root/coming-soon-backend/frontend/build/

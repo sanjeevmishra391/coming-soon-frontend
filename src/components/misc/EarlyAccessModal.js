@@ -34,8 +34,7 @@ const EarlyAccessModal = (props) => {
 
   const worklist = [
     { value: "student", label: "Student" },
-    { value: "developer", label: "Developer" },
-    { value: "employee", label: "Employee" },
+    { value: "working", label: "Working Professional" },
   ];
 
   const { loading, request: register } = useApi(users.register);

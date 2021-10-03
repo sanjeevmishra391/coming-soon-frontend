@@ -8,7 +8,7 @@ const Card = (props) => {
   return (
     <div className="card-cont">
       <div className="card-img-cont">
-        <FadeIn>
+        <FadeIn width="100%">
           {(onload) =>
             props.image !== "" ? (
               <img src={props.image} onLoad={onload} className="card-img" />
