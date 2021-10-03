@@ -63,6 +63,12 @@ const EarlyAccessModal = (props) => {
     } else {
       props.alertCallback(true, "failure", response.problem);
     }
+    setUserInfo((prev) => ({
+      ...prev,
+      name: "",
+      work: { value: "student", label: "Student" },
+      email: "",
+    }));
     props.onClose();
     console.log("response: ", response);
   };
